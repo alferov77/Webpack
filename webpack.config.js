@@ -17,7 +17,7 @@ module.exports = {
     new TerserPlugin,
     new CssMinimizerPlugin(),
     new ESLintPlugin({
-      overrideConfigFile: path.resolve(__dirname, 'eslint.config.mjs'),
+      overrideConfigFile: path.resolve(__dirname, 'eslintrc.js'),
       context: path.resolve(__dirname, 'src'),
       extensions: ['js', 'mjs', 'ts'],
     }),
