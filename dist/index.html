@@ -2,14 +2,15 @@
 <pre>
   Error: Child compilation failed:
   [eslint] Cannot read config file: /Users/andrejalferov/WebstormProjects/webpack/eslint.config.mjs
-  Error: end of the stream or a document separator is expected (3:10)
+  Error: end of the stream or a document separator is expected (6:10)
   
-   1 | export default [
-   2 |   {
-   3 |     files: ["src/**/*.js"],
+   3 | 
+   4 | export default [
+   5 |   {
+   6 |     files: ["*.{js,mjs,cjs,ts}"],
   --------------^
-   4 |     ignores: ["**/*.config.js"],
-   5 |     rules: {
+   7 |     languageOptions: {
+   8 |       globals: globals.browser,
   
   - child-compiler.js:174 
     [webpack]/[html-webpack-plugin]/lib/child-compiler.js:174:18

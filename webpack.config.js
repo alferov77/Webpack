@@ -19,7 +19,7 @@ module.exports = {
     new ESLintPlugin({
       overrideConfigFile: path.resolve(__dirname, 'eslint.config.mjs'),
       context: path.resolve(__dirname, 'src'),
-      extensions: ['js', 'mjs'],
+      extensions: ['js', 'mjs', 'ts'],
     }),
     new StylelintPlugin({
       overrideConfigFile: path.resolve(__dirname, 'stylelint.config.mjs'),

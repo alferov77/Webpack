@@ -1,9 +1,13 @@
+import { configs as tsConfigs } from "@typescript-eslint/eslint-plugin";
+import globals from "globals";
+
 export default [
   {
-    files: ["src/**/*.js"],
-    ignores: ["**/*.config.js"],
-    rules: {
-      semi: "error"
-    }
-  }
+    files: ["*.{js,mjs,cjs,ts}"],
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
+  ...tsConfigs.recommended,
 ];
+   
