@@ -7,11 +7,18 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
   mode: 'development',
-  output: {
-    filename: 'main.js'
+  entry: './src/index.js',
+  devServer: {
+    static: './dist',
+    port: 3001,
+    hot: true,
   },
+  output: {
+    filename: 'main.js',
+    path: __dirname + '/dist'
+  },
+  devtool: 'inline-source-map',
   plugins: [
     new MiniCssExtractPlugin(),
     new TerserPlugin,
@@ -27,6 +34,7 @@ module.exports = {
       extensions: ['css', 'scss'],
     }),
     new HtmlWebpackPlugin( {
+      title: 'Development',
       template: './src/index.pug',
       filename: 'index.html'
     })
