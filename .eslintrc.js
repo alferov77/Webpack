@@ -11,8 +11,9 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['*.ts'],
+            files: ['webpack.config.js'],
             rules: {
+                '@typescript-eslint/no-require-imports': 'off'
             },
         },
     ],
