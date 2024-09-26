@@ -1,3 +1,3 @@
 import './style.css';
 
-document.write('Hello world ! \n');
+document.write('Hello world \n');
